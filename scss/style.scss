@@ -1,0 +1,501 @@
+@import "_fonts";
+@import "_normalize";
+@import "_colors";
+@import "_footer";
+@import "_rules";
+@import "_ads";
+@import "_forms";
+
+
+.contentx-container {
+  justify-content: space-around !important;
+}
+
+.contentx {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body {
+  font-family: $font;
+  font-weight: 400;
+  color: $white;
+  background: transparent url('../img/fingerprint-lp-bg.jpg') no-repeat center/cover;
+  background-attachment: fixed;
+  line-height: 1.4;
+  font-size: 16px;
+  text-align: left;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/******************* BEGIN: HEADER *******************/
+.header {
+  width: 100%;
+
+  &-wrap {
+    @include widthContent(750px, 95%, 0);
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    text-decoration: none;
+    color: $white;
+    width: 143px;
+    height: 30px;
+    margin: 0 auto;
+    background: transparent url("../img/logo/logo.png") no-repeat center / cover;
+  }
+}
+/******************* END: HEADER *******************/
+
+/******************* BEGIN: COMMON *******************/
+.common {
+  @include widthContent(1200px, 100%, 0);
+
+  &-wrap-95 {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+}
+/******************* END: COMMON *******************/
+
+/******************* BEGIN: FINGERPRINT *******************/
+.fingerprint {
+
+  &__wrapper {
+    margin: 10px auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__place {
+    width: 252px;
+    height: 359px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent url("../img/fingerprint-bg.png") no-repeat center / cover;
+
+    &-mobile {
+      display: none;
+    }
+
+    &-active {
+      .hide {
+        display: none;
+      }
+      &-mobile {
+        .hide {
+          display: none;
+        }
+      }
+    }
+
+    &-noactive {
+      width: 91px;
+      height: 102px;
+      .hide {
+        display: none;
+      }
+      &-mobile {
+        width: 91px;
+        height: 102px;
+        .hide {
+          display: none;
+        }
+      }
+    }
+    
+  }
+
+  &__desc {
+    width: 449px;
+
+    &-title {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 50px;
+      padding-bottom: 20px;
+      margin: 0px;
+
+      span {
+        color: #C03BF8
+      }
+    }
+
+    &-subtitle {
+      border-top: 2px solid #222536;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+
+      &__arrow {
+        margin-right: 20px;
+      }
+
+      &__text {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+      }
+    }
+  }
+
+  &-prediction {
+    display: flex;
+    max-width: 780px;
+    margin: 50px auto 20 auto;
+    align-items: center;
+    justify-content: center;
+
+    &__number {
+      color: #D027FF;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      max-width: 527px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    &__img {
+      margin-right: 90px;
+
+      &-bg {
+        position: absolute;
+        z-index: -1;
+        left: 17%;
+        top: 5%;
+      }
+    }
+  }
+
+}
+/******************* END: FINGERPRINT *******************/
+
+
+/******************* BEGIN: RUNES *******************/
+.runes {
+  margin-bottom: 20px;
+
+  &__title {
+    max-width: 720px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    margin: 10px auto 0px auto;
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    list-style-type: none;
+    width: 115px;
+    text-align: center;
+
+    &-name {
+      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+/******************* END: RUNES *******************/
+
+/******************* BEGIN: JOIN *******************/
+.join {
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 28px 10px;
+  text-align: center;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: normal;
+    color: $white;
+    margin: 10px auto;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 320px;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 0px;
+    display: block;
+    text-decoration: none;
+    margin: 15px auto;
+    cursor: pointer;
+    border: 0;
+    color: $white;
+    background: $grey no-repeat 49px center / 20px;
+    font-weight: bold;
+
+    &--email {
+      background-color: $someViolet;
+    }
+
+    &--fb {
+      background-color: $lightBlue;
+      background-size: 11px;
+    }
+
+    &--google {
+      background-color: $darkOrange;
+
+      &.disabled {
+        opacity: 0.75;
+        filter: grayscale(100%);
+        pointer-events: none;
+      }
+    }
+  }
+
+}
+
+
+.loader {
+  height: 334px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: transparent url("../img/placeholder-bg.png") no-repeat center;
+}
+
+
+/******************* END: JOIN *******************/
+
+/******************* BEGIN: BANNERS *******************/
+
+.banner-choose-sign {
+  width: 780px;
+  height: 195px;
+  background: transparent url('../img/chose-sign-bg.jpg') no-repeat;
+  margin: 10px auto 20px auto;
+
+  &__title {
+    color: $white;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 15px;
+    color: $white;
+    text-align: center;
+    padding: 10px 30px;
+    background: #BC05F1;
+    display: flex;
+    justify-content: center;
+    width: 177px;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+}
+
+.banner-7readings {
+  width: 780px;
+  height: 219px;
+  background: transparent url('../img/7readings-bg.jpg') no-repeat;
+  margin: 10px auto 20px auto;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px;
+  }
+
+  &__subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  &__link {
+    color: #D027FF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.dream-decoder {
+  width: 774px;
+  height: 261px;
+  border: 3px solid #222536;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &-img {
+    width: 348px;
+    height: 201px;
+  }
+
+  &-content {
+    max-width: 324px;
+  }
+
+  &-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &-button {
+    font-weight: 700;
+    font-size: 15px;
+    color: $white;
+    text-align: center;
+    background: #BC05F1;
+    display: flex;
+    justify-content: center;
+    width: 175px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .open-email-link {
+    padding: 10px 30px;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+/******************* END: BANNERS *******************/
+
+
+/******************* BEGIN: ARTICLE *******************/
+.article-set {
+  &-block {
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 780px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 3px solid #222536;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    padding: 40px;
+    text-decoration: none;
+    color: $white;
+    text-align: left;
+
+    &__image {
+      width: 100%;
+      height: 200px;
+      background: $violetDark url("../img/bg-article.jpg") center / cover no-repeat;
+    }
+
+    &__title {
+      margin: 20px auto 5px;
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 700;
+    }
+
+    &__desc {
+      margin: 5px auto 0;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+
+    &__button {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 40px;
+      display: block;
+      text-decoration: none;
+      margin: 15px auto;
+      cursor: pointer;
+      border: 0;
+      color: $black;
+      background: $orange;
+      font-weight: bold;
+    }
+
+    &__content {
+      & > div {
+        height: 0;
+        opacity: 0;
+        transition: 0.2s;
+
+        &.open {
+          margin: 20px auto 0;
+          height: auto;
+          opacity: 1;
+        }
+      }
+
+      & h3 {
+        color: $orange;
+      }
+    }
+  }
+}
+
+/******************* END: ARTICLE *******************/
+
+
+@import "_medias";
+@import "_medias-banner-runic-cup";
+@import "_medias-footer";
+@import "_medias-runic-lander";

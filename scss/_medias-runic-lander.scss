@@ -1,0 +1,179 @@
+@media screen and (max-width: 780px) {
+  .runic-lander {
+    &__confirm {
+      &-wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .runic-lander {
+    &__header {
+      padding-bottom: 15px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__desc {
+      padding-bottom: 30px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__text {
+      padding-bottom: 30px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__progress {
+      margin-top: 0;
+
+      &-title {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &__desk {
+      max-width: 300px;
+
+      &-rune {
+        &[data-count="0"] {
+          &[data-move='center'] {
+            transform: translate(100px, -10px);
+          }
+        }
+
+        &[data-count="2"] {
+          &[data-move='center'] {
+            transform: translate(-100px, -10px);
+          }
+        }
+      }
+    }
+
+    &__result {
+      &-title {
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &__current {
+      &-rune {
+        margin: 10px 15px;
+      }
+    }
+
+    &__join {
+      padding: 30px 15px;
+
+      &-title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      &-button {
+        font-size: 16px;
+      }
+    }
+
+    &__prediction {
+      padding: 30px 22px;
+
+      &-wrapper {
+        flex-direction: column;
+      }
+
+      &-rune {
+        padding: 0 0 20px;
+      }
+
+      &-content {
+        &-button {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__confirm {
+
+      &-content {
+        padding-bottom: 20px;
+      }
+
+      &-button {
+        max-width: 350px;
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .runic-lander {
+    &__join {
+      &-button {
+        background-position: 30px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .runic-lander {
+    &__header {
+      padding-bottom: 7px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__desc {
+      padding-bottom: 15px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__text {
+      padding-bottom: 5px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__progress {
+      margin: 15px auto;
+
+      &-title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &__desk {
+      margin: 20px auto;
+
+      &-rune {
+        width: 69px;
+        height: 115px;
+
+        &[data-count="0"] {
+          &[data-move='center'] {
+            transform: translate(110px, -10px);
+          }
+        }
+
+        &[data-count="2"] {
+          &[data-move='center'] {
+            transform: translate(-110px, -10px);
+          }
+        }
+      }
+    }
+  }
+}

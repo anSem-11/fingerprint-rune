@@ -1,0 +1,10 @@
+@mixin widthContent($MW, $W, $TB) {
+  max-width: $MW;
+  width: $W;
+  margin: $TB auto;
+}
+
+@mixin mainWidth() {
+  max-width: 600px;
+  width: 100%;
+}

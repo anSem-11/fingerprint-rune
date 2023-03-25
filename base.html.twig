@@ -1,0 +1,48 @@
+{% import 'landings/fingerprint_rune/_google-macro.html.twig' as google %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}Everydayhoroscopes.com</title>
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
+
+    {% block meta %}
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+    {% endblock %}
+
+    {% include "landings/fingerprint_rune/_head.html.twig" %}
+    {% include 'components/favicon/index.html.twig' %}
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+{% include "utils/google_tag_manager_no_script.html.twig" %}
+
+<div class="wrapper">
+    <div class="wrapper-bg"></div>
+    <main class="main">
+
+        {% include "landings/fingerprint_rune/_header.html.twig" %}
+        <div class="common">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    {% include "landings/fingerprint_rune/_footer.html.twig" %}
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

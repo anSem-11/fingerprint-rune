@@ -1,0 +1,164 @@
+{% extends 'landings/fingerprint_rune/base.html.twig' %}
+{% import 'landings/fingerprint_rune/_google-macro.html.twig' as google %}
+{# {% import "/components/ads/pixfuture.html.twig" as pixfuture %} #}
+
+{% set title = 'Your Rune Stone Reading for Today' %}
+{% set description = "Share your personal vibes with the scanner to reveal your ruling rune of the day! Get your most accurate daily forecast that is more reliable than your zodiac sign's horoscope! Goosebumps guaranteed!" %}
+{% set keywords = 'runes, rune stone, how to read runes, rune stone meaning, rune stone symbols, dagaz, zodiac signs, fingerprint, daily horoscope fingerprint, fingerprint reading, finger reading' %}
+{% set url = 'https://everydayhoroscopes.com/landing/fingerprint-rune' %}
+{% set image = '' %}
+
+{% block title %}{{ title }} | {% endblock %}
+
+{% block meta %}
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}">
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="common-wrap-95">
+        <div class="fingerprint">
+            <div class="fingerprint__wrapper">
+                <a class="fingerprint__place fingerprint__place-desctop js-finger-place" data-type='placeholder'>
+                    <img class="fingerprint__place-active" src="/landings/fingerprint_rune/img/fingerprint-noactive.png" alt="fingerplace">
+                    <img class="fingerprint__place-noactive hide" src="/landings/fingerprint_rune/img/fingerprint-active.gif" alt="fingerplace">
+                </a>
+                <div class="fingerprint__desc">
+                    <h1 class="fingerprint__desc-title">YOUR <span>RUNE</span> <br>FOR <span>TODAY!</span></h1>
+                    <a class="fingerprint__place fingerprint__place-mobile js-finger-place-mobile" data-type='placeholder'>
+                        <img class="fingerprint__place-active-mobile" src="/landings/fingerprint_rune/img/fingerprint-noactive.png" alt="fingerplace">
+                        <img class="fingerprint__place-noactive-mobile hide" src="/landings/fingerprint_rune/img/fingerprint-active.gif" alt="fingerplace">
+                    </a>
+                    <div class="fingerprint__desc-subtitle">
+                        <div class="fingerprint__desc-subtitle__arrow">	&#8592</div>
+                        <p class="fingerprint__desc-subtitle__text">Hold to share your vibes and get <br>your runic prediction for today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ads">{{ google.EDH_fingerprint_rune() }}</div>
+        <div class="runes">
+            <h2 class="runes__title">All runes</h2>
+            <ul class="runes__block">
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/perthro.png" alt="perthro" class="runes__item-img">
+                    <p class="runes__item-name">Perthro</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/algiz.png" alt="algiz" class="runes__item-img">
+                    <p class="runes__item-name">Algiz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/tiwaz.png" alt="tiwaz" class="runes__item-img">
+                    <p class="runes__item-name">Tiwaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/berkan.png" alt="berkan" class="runes__item-img">
+                    <p class="runes__item-name">Berkan</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/inguz.png" alt="inguz" class="runes__item-img">
+                    <p class="runes__item-name">Inguz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/sowilo.png" alt="sowilo" class="runes__item-img">
+                    <p class="runes__item-name">Sowilo</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/ansuz.png" alt="ansuz" class="runes__item-img">
+                    <p class="runes__item-name">Ansuz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/eihwaz.png" alt="eihwaz" class="runes__item-img">
+                    <p class="runes__item-name">Eihwaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/laguz.png" alt="laguz" class="runes__item-img">
+                    <p class="runes__item-name">Laguz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/mannaz.png" alt="mannaz" class="runes__item-img">
+                    <p class="runes__item-name">Mannaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/ehwaz.png" alt="ehwaz" class="runes__item-img">
+                    <p class="runes__item-name">Ehwaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/raido.png" alt="raido" class="runes__item-img">
+                    <p class="runes__item-name">Raido</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/dagaz.png" alt="dagaz" class="runes__item-img">
+                    <p class="runes__item-name">Dagaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/hagalaz.png" alt="hagalaz" class="runes__item-img">
+                    <p class="runes__item-name">Hagalaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/fehu.png" alt="fehu" class="runes__item-img">
+                    <p class="runes__item-name">Fehu</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/uruz.png" alt="uruz" class="runes__item-img">
+                    <p class="runes__item-name">Uruz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/thurisaz.png" alt="thurisaz" class="runes__item-img">
+                    <p class="runes__item-name">Thurisaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/kauna.png" alt="kauna" class="runes__item-img">
+                    <p class="runes__item-name">Kauna</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/othala.png" alt="othala" class="runes__item-img">
+                    <p class="runes__item-name">Othala</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/wunjo.png" alt="wunjo" class="runes__item-img">
+                    <p class="runes__item-name">Wunjo</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/isaz.png" alt="isaz" class="runes__item-img">
+                    <p class="runes__item-name">Isaz</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/gebo.png" alt="gebo" class="runes__item-img">
+                    <p class="runes__item-name">Gebo</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/jera.png" alt="jera" class="runes__item-img">
+                    <p class="runes__item-name">Jera</p>
+                </li>
+                <li class="runes__item">
+                    <img src="/landings/fingerprint_rune/img/runes/nauthiz.png" alt="nauthiz" class="runes__item-img">
+                    <p class="runes__item-name">Nauthiz</p>
+                </li>
+            </ul>
+        </div>
+            {% include "landings/fingerprint_rune/_article.html.twig" %}
+    </div>
+    {% include 'utils/postback_flex.html.twig' %}
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        var redirectUrl = '{{ path("landing:fingerprint-rune-join") }}';
+    </script>
+    {% if app.getEnvironment() == 'dev' %}
+        <script defer src="{{ asset('landings/fingerprint_rune/js/src/fingerprint.js') }}"></script>
+    {% else %}
+        <script defer src="{{ asset('landings/fingerprint_rune/js/build/fingerprint.min.js') }}"></script>
+    {% endif %}
+{% endblock %}

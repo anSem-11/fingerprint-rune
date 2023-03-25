@@ -1,0 +1,150 @@
+@media screen and (max-width: 690px) {
+  .runic-cup {
+    width: 300px;
+    height: 400px;
+
+    &[data-id="1"] {
+      background: url("../img/runic-cup/banner-1-mobile.jpg") no-repeat center/cover;
+    }
+
+    &[data-id="2"] {
+      background: url("../img/runic-cup/banner-2-mobile.jpg") no-repeat center/cover;
+    }
+
+    &__left {
+      &-title {
+        &[data-id="1"] {
+          display: none;
+        }
+
+        &[data-id="2"] {
+          top: 15px;
+          left: 0;
+          max-width: 100%;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+
+      &-text {
+        &[data-id="1"] {
+          left: 45px;
+          top: 16px;
+          max-width: 250px;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 25px;
+        }
+
+        &[data-id="2"] {
+          left: 57px;
+          top: 66px;
+          max-width: 210px;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+        }
+
+        &--small {
+          &[data-id="2"] {
+            display: none;
+          }
+        }
+      }
+
+      &-btn {
+        &[data-id="1"] {
+          left: 90px;
+          top: 130px;
+          padding: 7px 17px;
+          font-size: 17px;
+          line-height: 21px;
+        }
+
+        &[data-id="2"] {
+          left: 99px;
+          top: 132px;
+          padding: 7px 17px;
+          font-size: 17px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    &__right {
+      &-link {
+      }
+
+      &-title {
+        &[data-id="1"] {
+          left: 0;
+          top: 239px;
+          max-width: 100%;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 25px;
+        }
+
+        &[data-id="2"] {
+          left: 18px;
+          top: 236px;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+
+      &-text {
+        &[data-id="1"] {
+          left: 66px;
+          top: 293px;
+          max-width: 210px;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: normal;
+        }
+
+        &[data-id="2"] {
+          display: none;
+        }
+
+        &--small {
+          &[data-id="1"] {
+            display: none;
+          }
+
+          &[data-id="2"] {
+            left: 18px;
+            top: 315px;
+            max-width: 165px;
+            display: block;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+          }
+
+        }
+      }
+
+      &-btn {
+        &[data-id="1"] {
+          left: 90px;
+          top: 366px;
+          padding: 7px 17px;
+          font-size: 17px;
+          line-height: 21px;
+        }
+
+        &[data-id="2"] {
+          left: 18px;
+          top: 379px;
+          padding: 7px 15px;
+          font-size: 17px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

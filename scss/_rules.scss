@@ -1,0 +1,36 @@
+@import "_colors";
+@import "_mixin";
+
+$font: 'Open Sans', Arial, sans-serif;
+
+.hide {
+  display: none !important;
+}
+
+.btn{
+  width: 252px;
+  height: 40px;
+  line-height: 40px;
+  background: $pink;
+  border-radius: 5px;
+  color: $white;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  transition: .2s;
+  font-weight: bold;
+  text-decoration: none;
+  &--center{
+    margin: 0 auto;
+  }
+  &.done{
+    background-color: $violet;
+    color: $white;
+  }
+}
+
+.grecaptcha-badge{
+  opacity: 0 !important;
+}

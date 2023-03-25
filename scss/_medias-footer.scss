@@ -1,0 +1,21 @@
+@media screen and (max-width: 774px) {
+  .footer {
+    &-wrap {
+      flex-direction: column;
+    }
+    &__info {
+      margin-right: 0;
+      order: 1;
+    }
+
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footer {
+    &__info, &__link {
+      font-size: 13px;
+      line-height: 1.38;
+    }
+  }
+}

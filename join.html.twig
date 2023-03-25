@@ -1,0 +1,102 @@
+{% extends 'landings/fingerprint_rune/base.html.twig' %}
+{% import 'landings/fingerprint_rune/_google-macro.html.twig' as google %}
+
+{% set title = 'Your Rune Stone Reading for Today' %}
+{% set description = "Share your personal vibes with the scanner to reveal your ruling rune of the day! Get your most accurate daily forecast that is more reliable than your zodiac sign's horoscope! Goosebumps guaranteed!" %}
+{% set keywords = 'runes, rune stone, how to read runes, rune stone meaning, rune stone symbols, dagaz, zodiac signs, fingerprint, daily horoscope fingerprint, fingerprint reading, finger reading' %}
+{% set url = 'https://everydayhoroscopes.com/landing/fingerprint-rune/join' %}
+{% set image = '' %}
+
+{% block title %}{{ title }} | {% endblock %}
+
+{% block meta %}
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}">
+{% endblock %}
+
+{% block head %}
+    {# BEGIN-VALIDATION #}
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lc74q4UAAAAALcUjpWfyJC672e-JNsQMcJOqL-4'
+            async></script>
+    <link rel="stylesheet" href="{{ asset('vendor/just-validate/dist/css/justValidateTooltip.min.css') }}">
+    {# END-VALIDATION #}
+{% endblock %}
+
+{% block content %}
+    <div class="common-wrap-95">
+        <div class="runes">
+            <h2 class="runes__title js-finger-header">
+                Your ruling rune has been successfully revealed! <br>Choose how you'd like to proceed.
+            </h2>
+
+            <div class="loader">
+                <img class="fingerprint__place-active" src="/landings/fingerprint_rune/img/runes/{{ app.request.cookies.get('fingerprintRune') }}.png" alt="fingerplace">
+            </div>
+
+            <div class="join">
+                <div class="join__title">Click below to get your reliable runic prediction:</div>
+                <div class="{% if not ('nobutton' in app.session.get('utm_campaign')) %}hide{% endif %} js-hidden-form-wrapper">
+                    <div class="join__form">
+                        <!-- (kS'OqF13w{=K~). -->
+                        <form class="form js-form-subscribe" method="POST" action="">
+                            <div class="just-validate-tooltip-container">
+                                <input class="form__input"
+                                       type="email"
+                                       data-validate-field="email"
+                                       name="email"
+                                        {% if app.session.get('userEmail') is defined and app.session.get('userEmail') != null %}
+                                            value="{{ app.session.get('userEmail') }}"
+                                        {% endif %}
+                                       placeholder="Enter email">
+                            </div>
+                            <button class="form__btn" type="submit">Join to get prediction</button>
+                            <div class="form__under">
+                                This site is protected by reCAPTCHA and the Google
+                                <a hreflang="en-us" target="_blank" href="https://policies.google.com/privacy">Privacy
+                                    Policy</a> and
+                                <a hreflang="en-us" target="_blank" href="https://policies.google.com/terms">Terms of
+                                    Service</a> apply.
+                            </div>
+                        </form>
+                    </div>
+                    <div class="join__text js-hidden-form-under">or</div>
+                </div>
+
+                <div class="join__btn join__btn--email {% if 'nobutton' in app.session.get('utm_campaign') %}hide{% endif %} js-button-show-form">
+                    Continue with Email
+                </div>
+
+                <div id="gSignInWrapper">
+                    <div id="customBtn" class="customGPlusSignIn">
+                        <div class="join__btn join__btn--google js-subscribe-google">Continue with Google</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ads">{{ google.EDH_fingerprint_rune() }}</div>
+
+            {% include "landings/fingerprint_rune/_article.html.twig" %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        var urlSubscribe = '{{ path('user:subscribe') }}';
+        var userEmail = "{{ app.user.getEmail() | default('') }}";
+        var urlPrediction = '{{ path('landing:fingerprint-rune-prediction') }}';
+    </script>
+    <script defer src="{{ asset('vendor/just-validate/dist/js/just-validate.min.js') }}"></script>
+    {% if app.getEnvironment() == 'dev' %}
+        <script defer src="{{ asset('js/src/http-request.js') }}"></script>
+        <script defer src="{{ asset('landings/fingerprint_rune/js/src/validate.js') }}"></script>
+    {% else %}
+        <script defer src="{{ asset('js/build/http-request.min.js') }}"></script>
+        <script defer src="{{ asset('landings/fingerprint_rune/js/build/validate.min.js') }}"></script>
+    {% endif %}
+{% endblock %}

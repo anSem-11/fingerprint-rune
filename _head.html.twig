@@ -1,0 +1,12 @@
+{% if app.getEnvironment() == 'dev' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('landings/fingerprint_rune/css/style.css') }}">
+{% else %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('landings/fingerprint_rune/css/style.min.css') }}">
+{% endif %}
+
+
+{% include '/utils/adsense.html.twig' %}
+{% include "utils/google_tag_manager.html.twig" %}
+{% include '/utils/gtag.html.twig' %}
+
+

@@ -1,0 +1,11 @@
+.ads {
+  text-align: center;
+  margin: 0 auto 20px auto;
+  &--300x250 {
+    width: 300px;
+    height: 250px;
+  }
+  &--adapt {
+    height: auto;
+  }
+}

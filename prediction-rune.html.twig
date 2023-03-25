@@ -1,0 +1,245 @@
+{% set runes = [
+    {
+        name: 'fehu',
+        img: '/landings/fingerprint_rune/img/runes/fehu.png',
+        text: 'It’s the rune of possession, ownership. The rune of the material. Do not be condescending to it, do not think it weak because of its firm focus on solid things. Because this focus is actually its fundamental force, its task, and its purpose.
+            You can use FEHU to achieve a material, tangible result, to turn your plans into palpable reality. In any case, FEHU tells you to stay as uncomplicated as most material things are. It draws your attention to the world of the material and promises to support you in it and help you gain success.'
+    },
+    {
+        name: 'uruz',
+        img: '/landings/fingerprint_rune/img/runes/uruz.png',
+        text: 'URUZ is the rune of power and energy (both magical and sexual). 
+            It should be noted that URUZ helps in healing, especially if a person is weakened by a severe and prolonged illness, and also helps to feel the joy of life.
+            The URUZ rune contains enough energy to bring it into any area of your life. It can kick-start your projects and ideas and drive them further on. URUZ’s spontaneous, powerful energy overcomes any obstacles in its path.'
+    },
+    {
+        name: 'thurisaz',
+        img: '/landings/fingerprint_rune/img/runes/thurisaz.png',
+        text: 'Thurisaz is one of the most potent runes of protection and enforcement. Thurisaz is always a challenge. Even when it promises something, the rune will break its promise if it finds that the agreement goes against the higher cause. 
+            Thurisaz cannot do with disobedience and doesn’t hold back on its manifestation. It is an uncontrollable force that takes little account of anyone and abides by its inner logic. It’s almost impossible to influence or overmaster it. Its goals are mostly honorable but can stand in glaring contrast to your wishes. However, if your goals are the same, Thurisaz will take all the dirty work without question.'
+    },
+    {
+        name: 'ansuz',
+        img: '/landings/fingerprint_rune/img/runes/ansuz.png',
+        text: 'ANSUZ is easy to understand and articulate. Its essence is communication in all forms, including interaction with higher powers and our own subconscious. ANSUZ speaks to us in a language we understand. However, this language is only understandable if we want to hear and understand it. Wisdom will not knock on the window if you have closed the door. ANSUZ is a manifestation of the world’s will to speak with you. It’s not about giving you orders. Those who have ears must hear.'
+    },
+    {
+        name: 'raido',
+        img: '/landings/fingerprint_rune/img/runes/raido.png',
+        text: 'This rune is associated with roads and movement. The concept of this rune focuses not on its purpose but on the movement itself. That’s why it’s associated with any movement: that of molecules and atoms, blood through our vessels, planets around the Sun, and the Sun itself – all these things are RAIDO.
+            The rune is all about roads. If you set off on the road, and want your path to be smooth and successful, draw the rune. If you get this rune in your reading, it means that you’re on the way. It’s simple.'
+    },
+    {
+        name: 'kauna',
+        img: '/landings/fingerprint_rune/img/runes/kauna.png',
+        text: 'KAUNA stands for raw power that gives life; it is used to fuel any initiative with energy. The rune helps transform information into interpretation and understanding, which is an entirely different level. In general, KAUNA is a master starter for any project, and one of the classic runes in love magic. It is to ignite passion, to create a relationship, and fuel it further on… At the same time, KAUNA is not a firm foundation - it’s the Muspelheim, unknown and blazing hot, energizing but completely unlivable. It’s not even an embryo, it’s a male cell that can become an embryo. '
+    },
+    {
+        name: 'gebo',
+        img: '/landings/fingerprint_rune/img/runes/gebo.png',
+        text: 'Since GEBO is a partnership rune, it is associated with love magic; but GEBO is more about partnership than love. It is no coincidence that the rune is symmetrical. As above, so below. What you give is given to you. This situation is not very similar to romantic relationships as we know them. Usually, love is understood as a feeling that seeks to either give or possess. In any case, we are not talking about balance. Love is generally chaotic.'
+    },
+    {
+        name: 'wunjo',
+        img: '/landings/fingerprint_rune/img/runes/wunjo.png',
+        text: 'This rune is full of energy. WUNJO is the rune of joy. It’s all about being happy with your life. At the same time, WUNJO affects your perception of reality and not reality itself. However, the power of this impact should not be underestimated. The internal determines the external. A WUNJO state of mind may help establish good relationships, be more productive, and improve your well-being. However, all of the above may not lead to WUNJO’s cloudless joy. This feeling is not merit-based – you get it for no reason at all.
+            WUNJO is a light and clear rune. Don’t ask the impossible from it. It won’t make your life perfect, but it can give you the necessary impulse to fill your soul with light, warmth, and gratitude to the universe.'
+    },
+    {
+        name: 'hagalaz',
+        img: '/landings/fingerprint_rune/img/runes/hagalaz.png',
+        text: 'This is the rune of destruction. It is associated with the natural forces of destruction and with the energies of the elements. The spikes of energy during mass disasters (floods, earthquakes, volcanic eruptions) are similar to the power of this rune. The primary magical use of this rune is to help get out of the "vicious circle." The simplest example: the feeling of self-pity that is familiar to almost everyone.
+            The rune is about breaking. You want to free yourself from everything that limits you and feel your own world of freedom.'
+    },
+    {
+        name: 'isaz',
+        img: '/landings/fingerprint_rune/img/runes/isaz.png',
+        text: 'ISAZ is the rune of suspension, of forced halt. As long as ISAZ is present in your reading, you won’t be able to move at the same pace you did before. Everything that surrounds you will resist your forward movement, and your progress will slow down. 
+            ISAZ is the rune of a physical, solid plane, the rune of embodiment. It’s the force that gives shape and order to your ideas. It helps your chaotic thoughts and emotions to slow down and assemble into a significant and vital Something. Other runes may be more energetic and easy to maneuver, they may offer more opportunities. But the power of ISAZ is beyond any limit you can imagine because ISAZ is more than a thought - it is the embodiment of a thought.'
+    },
+    {
+        name: 'nauthiz',
+        img: '/landings/fingerprint_rune/img/runes/nauthiz.png',
+        text: 'Nauthiz makes people retreat into themselves, urging them to draw all the necessary things in themselves. At the same time, Nauthiz doesn’t let anyone forget that this is not all. With this rune’s help, people learn patience, wisdom, discipline, and self-restriction.
+            Against all the odds, Nauthiz carries a lot of optimism. It knows that any circumstances will change if you wait long enough. Truth be told, here waiting is not a passive dreamy expectation of a miracle but a persistent struggle with the pressure coming from the outside or/and within.'
+    },
+    {
+        name: 'jera',
+        img: '/landings/fingerprint_rune/img/runes/jera.png',
+        text: 'JERA needs time. It’s all about time and the reward that awaits you, but only if you work hard and long enough despite all the difficulties and lack of understanding. The virtues of the rune are diligence, patience, and trust in the natural order of things.
+            JERA means that your positive efforts will soon be rewarded. JERA stands for your kindness and all the good things you did that will pay off in a big way. It’s about justice and rightfulness of any kind. You reap as you sow. '
+    },
+    {
+        name: 'eihwaz',
+        img: '/landings/fingerprint_rune/img/runes/eihwaz.png',
+        text: 'EIHWAZ has a profound meaning. It’s the border, but what is there beyond it? It’s the rune of the unknown, but it’s not unknown like the results of a lottery. EIHWAZ tells you about a grand, palpable, and real world that we can’t know or experience until we cross that border. It’s a rune of mystery, of initiation. 
+            The rune establishes a connection between the past, the present, and the future. It protects you from the world of evil and provides help from your ancestors. It gives you a chance to intuit your way through a puzzling situation.'
+    },
+    {
+        name: 'perthro',
+        img: '/landings/fingerprint_rune/img/runes/perthro.png',
+        text: 'PERTHRO symbolizes a vessel of mysteries. It is the symbol of choice that doesn’t abide by any laws except the force of destiny. 
+            PERTHRO is also associated with the feminine nature and female sexuality in particular. Hence, there is a connection with the subconscious, a mystery, something close and familiar but nonetheless concealed from view. No matter how closely one observes a rune pouch or a pregnant woman, there’s no way to even approach an understanding of what’s to come out. The outcome is unpredictable.'
+    },
+    {
+        name: 'algiz',
+        img: '/landings/fingerprint_rune/img/runes/algiz.png',
+        text: 'ALGIZ is the rune of protection. Generally speaking, there are several runes in the Futhark that have a protective function. But, of course, each of these runes carries an exceptional meaning, its own distinct taste. ALGIZ is a passive protection rune, but it is also quite efficient.
+            It will work and save your life, but it won’t sacrifice itself to protect you. It’s just the natural order of things – under certain conditions, it acts in a certain way. And the result of this action – saving your life – is just a side effect.
+            Keep in mind that this is not a cure-all. An airbag will not save you from cold, hunger, or heartbreak, so don’t ask the impossible from ALGIZ.'
+    },
+    {
+        name: 'sowilo',
+        img: '/landings/fingerprint_rune/img/runes/sowilo.png',
+        text: 'SOWILO is the Sun. It is the most energetically charged rune. SOWILO is an auspicious symbol.
+            Besides energy and life-giving force, SOWILO symbolizes the Sun as the criterion of order. Think of that: the notion of time is based solely on SOWILO. Year and day are natural chronological tie-points on Earth. 
+            SOWILO doesn’t establish order, but life is possible only when we comply with this energy flow. 
+            Move the Earth a little back or forth, change its tilt, and life as we know it cannot exist.
+            SOWILO is organizing energy.'
+    },
+    {
+        name: 'tiwaz',
+        img: '/landings/fingerprint_rune/img/runes/tiwaz.png',
+        text: 'TIWAZ is associated with a very clear image of the Spirit Warrior, valiant, true to his principles until the end, even if it will hurt him. It is all about honesty and faith, which have way more value than anything physical.
+            In ancient times, warriors drew TIWAZ on their shields before a battle. In this way, they not only asked the Great Warrior for help. They drew it as a reminder: in the heat of the fight, a true warrior forgets about the values of the physical world, he or she is not fighting for them…
+            Moreover, TIWAZ helps to restore justice in litigation. 
+            TIWAZ is the symbol of true grit.'
+    },
+    {
+        name: 'berkan',
+        img: '/landings/fingerprint_rune/img/runes/berkan.png',
+        text: 'BERKAN is one of the classic female runes. Traditionally, BERKAN symbolizes growth and development; very often, BERKAN is associated with motherhood.
+            BERKAN is also the rune of creativity. BERKAN’s delicacy and genuine attentiveness to others allow it to notice the slightest manifestations of the creative impulse. The rune is like a poet’s wife who creates the perfect conditions for her husband to write beautiful poems.
+            The rune’s essence is soft but attentive and shrewd; it will do everything possible to solve a problem.'
+    },
+    {
+        name: 'ehwaz',
+        img: '/landings/fingerprint_rune/img/runes/ehwaz.png',
+        text: 'This is the rune of traveling. And at the same time, it is not associated with the concept of moving.
+            Astrologically speaking, EHWAZ is a journey across the ninth house (the house of ideals, higher education, and long-distance traveling). But this journey is unlike any other - it expands your consciousness. It helps you embrace the things that you previously thought to be incomprehensible.'
+    },
+    {
+        name: 'mannaz',
+        img: '/landings/fingerprint_rune/img/runes/mannaz.png',
+        text: 'This rune symbolizes a human. And, as you know, people are social animals.
+            MANNAZ stands for the man (human) in the social sense of this word. And that’s why the rune is traditionally considered to be a rune of socialization. This rune appeals to the man as a part of society. Here people are viewed as cogs in a mechanism. 
+            This rune symbolizes the relationship between the man and society from the viewpoint of society at that.
+            Beyond that, MANNAZ symbolizes society in general, its expectations, and plans. It is the rune of public recognition, e.g., a career, and the man in society.'
+    },
+    {
+        name: 'laguz',
+        img: '/landings/fingerprint_rune/img/runes/laguz.png',
+        text: 'LAGUZ is a female rune that stands for water. Its meaning – intuition – is also connected to water as a flow. Water can penetrate any small crack and uses any chance to move forward; just like it, intuition helps you reach your goals. It’s a piece of practical knowledge, not academic wisdom.
+            Despite being a very powerful rune, LAGUZ is void of aggression. River flow can be dangerous and powerful, but only when the circumstances favor it. When a river corridor changes, the character of the flow changes, too. The primary lesson LAGUZ teaches you is that you can adapt to the circumstances without changing your inner self.'
+    },
+    {
+        name: 'inguz',
+        img: '/landings/fingerprint_rune/img/runes/inguz.png',
+        text: 'This is the rune of fertility. INGUZ tends to underestimate difficulties – and indeed, when you feel the vibes of this rune, you can do something that may seem impossible to accomplish. INGUZ is action.
+            Of course, as a symbol of fertility, INGUZ is also associated with the joy of sexual relationships. This is something like a fertility rite: when all the rules, usually unshakable, are removed, you become a part of nature. INGUZ is the unclouded joy of being.'
+    },
+    {
+        name: 'dagaz',
+        img: '/landings/fingerprint_rune/img/runes/dagaz.png',
+        text: 'DAGAZ is a rune that is generally considered one of the most positive and unshadowed ones. It solves problems, dispels darkness, and brings the Sun back after a long and cold night… When you use the rune to find a way out of a situation, this situation can at first become even more complicated. To cope with the situation, you will have to balance on this thin bridge. Only after it will the situation change for the better. DAGAZ is the rune of catharsis – things will get better soon, but you’ll have to suffer a bit before.'
+    },
+    {
+        name: 'othala',
+        img: '/landings/fingerprint_rune/img/runes/othala.png',
+        text: 'DAGAZ is a rune that is generally considered one of the most positive and unshadowed ones. It solves problems, dispels darkness, and brings the Sun back after a long and cold night… When you use the rune to find a way out of a situation, this situation can at first become even more complicated. To cope with the situation, you will have to balance on this thin bridge. Only after it will the situation change for the better. DAGAZ is the rune of catharsis – things will get better soon, but you’ll have to suffer a bit before.'
+    }
+] %}
+
+{% extends 'landings/fingerprint_rune/base.html.twig' %}
+{% import 'landings/fingerprint_rune/_google-macro.html.twig' as google %}
+
+{% set title = 'Your Rune Stone Reading for Today' %}
+{% set description = "Share your personal vibes with the scanner to reveal your ruling rune of the day! Get your most accurate daily forecast that is more reliable than your zodiac sign's horoscope! Goosebumps guaranteed!" %}
+{% set keywords = 'runes, rune stone, how to read runes, rune stone meaning, rune stone symbols, dagaz, zodiac signs, fingerprint, daily horoscope fingerprint, fingerprint reading, finger reading' %}
+{% set url = 'https://everydayhoroscopes.com/landing/fingerprint-rune/prediction' %}
+{% set image = '' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block meta %}
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}">
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="common-wrap-95">
+        <div class="fingerprint">
+            <div class="fingerprint-prediction">
+                <img class="fingerprint-prediction__img" 
+                    {% for rune in runes %}
+                        {% if rune.name == app.request.cookies.get('fingerprintRune') %}
+                            src="{{ rune.img }}"
+                        {% endif %}
+                    {% endfor %}
+                >
+                {# <img src="/landings/fingerprint_rune/img/fingerprint_bg.png" alt="" class="fingerprint-prediction__img-bg"> #}
+                <div class="fingerprint-prediction__desc">
+                    <div class="fingerprint-prediction__number">
+                        {{ app.request.cookies.get('fingerprintRune') | capitalize }}
+                    </div>
+                    <div class="fingerprint-prediction__text">
+                        {% for rune in runes %}
+                            {% if rune.name == app.request.cookies.get('fingerprintRune') %}
+                                {{ rune.text }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ads">{{ google.EDH_fingerprint_rune() }}</div>
+    </div>
+
+
+    <div class="common-wrap-95">
+        {% include "landings/fingerprint_rune/_banner-chose-sign.html.twig" %}
+        {% include "landings/fingerprint_rune/_banner-7readings.html.twig" %}
+
+        <div class="dream-decoder">
+            <img class="dream-decoder-img" src="/landings/fingerprint_rune/img/magic-book.png" alt="magicbook">
+            <div class="dream-decoder-content">
+                <p class="dream-decoder-text">
+                    The confirmation email has been sent to your inbox. If you can’t find it there, please check every folder, including Spam/Junk
+                </p>
+                <div class="dream-decoder-button js-link"></div>
+            </div>
+        </div>
+
+        <div class="ads">{{ google.EDH_fingerprint_rune_2() }}</div>
+
+        {% include "landings/fingerprint_rune/_article.html.twig" %}
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {% include "components/google-optimize/google-optimize-banner-settings.html.twig" %}
+
+    <script>
+        var userEmail = "{{ app.user.getEmail() | default('') }}";
+        var openEmailTextLink = 'Go to mailbox';
+        var gmailLink = 'https://mail.google.com/mail/u/0/#search/everydayhoroscopes+confirm';
+    </script>
+
+    {% if app.getEnvironment() == 'dev' %}
+        <script src="{{ asset('js/src/cloudinary.js') }}"></script>
+        <script defer src="{{ asset('landings/fingerprint_rune/js/src/open-mail.js') }}"></script>
+    {% else %}
+        <script src="{{ asset('js/build/cloudinary.min.js') }}"></script>
+        <script defer src="{{ asset('landings/fingerprint_rune/js/build/open-mail.min.js') }}"></script>
+    {% endif %}
+{% endblock %}
